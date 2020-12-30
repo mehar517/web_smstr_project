@@ -1,0 +1,51 @@
+html
+  head
+    title= title
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    link(rel="stylesheet", href="/public/stylesheets/style.css")
+
+<body style="background-color: black">
+<!-- logo -->
+        <div class="logo-container">
+        <div class="col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
+        <img id="l" src="public\images\flamehut.png" alt="" width="250px" height="250px">
+        </div>
+        </div>
+<!-- navbar -->
+<div class="center">
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/aboutus">ABOUT US</a></li>
+            <li><a href="contactus">CONTACT US</a></li>
+            <li><a href="/login">LOGIN</a></li>
+            <li><a href="/register">SIGNUP</a></li>
+            
+        </ul>
+        </div>
+       
+
+
+
+block content
+    h1#w Add Your Details
+    form(action="/products/edit/", method="post", id="x")
+        .form-group
+            label(for="name") Full Name
+            input#name(type="text", class="form-control", name="name",value=product.name)
+        .form-group
+            label(for="cellno") Cell No.
+            input#cellno(type="text", class="form-control", name="cellno",value=product.cellno)
+        .form-group
+            label(for="address") Address
+            input(type="text", class="form-control", name="address",value=product.address)
+        .form-group
+            label(for="city") City
+            input(type="text", class="form-control", name="city",value=product.city)
+        input(type="submit", class="btn btn-info" id="y")
+</body>
+        
+        
+    
