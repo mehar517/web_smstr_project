@@ -11,7 +11,7 @@ var aboutusRouter = require("./routes/users");
 var contactusRouter = require("./routes/users");
 var session = require('express-session');
 var sessionAuth = require("./middlewares/sessionAuth");
-var flash = require('connect-flash');
+
 
 var app = express();
 app.use(session({ secret: 'keyboard cat', cookie: { maxAge: 60000 }}))
@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use('/public', express.static(__dirname + "/public"));
-app.use(flash());
+
 
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
